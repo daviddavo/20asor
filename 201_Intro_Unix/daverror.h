@@ -6,8 +6,8 @@
 
 long __davo_check(const long n, const char f[], const int l) {
     if (n == -1) {
-        printf("Error: %s (%d)\n", strerror(errno), errno);
-        printf("@ %s:%d\n", f, l);
+        fprintf(stderr, "Error: %s (%d)\n", strerror(errno), errno);
+        fprintf(stderr, "@ %s:%d\n", f, l);
         exit(1);
     }
 
