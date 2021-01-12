@@ -50,7 +50,7 @@ int main(int argc, char ** argv) {
 
     if (borrar) {
         printf("Borrando %s\n", argv[0]);
-        DAVO_CHECK(remove(argv[0]));
+        DAVO_CHECK(unlink(argv[0]));
     } else {
         printf("Te has salvado\n");
     }

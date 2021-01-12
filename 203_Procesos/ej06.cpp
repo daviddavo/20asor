@@ -51,12 +51,12 @@ int main() {
 
     DAVO_CHECK(pid = fork());
     if (pid == 0) {
-        // sleep(1);
+        // sleep(10);
+        hijo();
+    } else {
+        sleep(10);
         printf("Soy el proceso padre!\n");
         showvars();
-    } else {
-        // sleep(1);
-        hijo();
     }
 
 
