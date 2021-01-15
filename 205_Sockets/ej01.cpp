@@ -48,7 +48,7 @@ int main(int argc, char ** argv) {
     addrinfo * res;
 
     for (int i = 1; i < argc; i++) {
-        if (ierror = getaddrinfo(argv[i], NULL, &hints, &res)) {
+        if ((ierror = getaddrinfo(argv[i], NULL, &hints, &res))) {
             fprintf(stderr, "Error getaddrinfo(): %s for %s\n", gai_strerror(ierror), argv[i]);
             continue;
         }
